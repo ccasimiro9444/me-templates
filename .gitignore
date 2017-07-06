@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Secret
+*.p12
+
+# Mac
+.DS_Store
