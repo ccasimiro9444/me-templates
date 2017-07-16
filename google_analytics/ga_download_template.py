@@ -1,5 +1,4 @@
 #Import libraries
-import argparse
 from apiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
 import httplib2
@@ -41,7 +40,7 @@ class project_name(argparse.Action):
             values = getpass.getpass("Enter the project_name:")
         setattr(namespace, self.dest, values)
 
-parser = argparse.ArgumentParser(description='parse custom_data_source_id,  of the variables')
+parser = argparse.ArgumentParser(description='parse various variables')
 parser.add_argument('-c', action=custom_data_source_id, nargs='?', dest='custom_data_source_id', help='Enter your custom_data_source_id')
 parser.add_argument('-w', action=web_property_id, nargs='?', dest='web_property_id', help='Enter your web_property_id')
 parser.add_argument('-a', action=account_id, nargs='?', dest='account_id', help='Enter your account_id')
